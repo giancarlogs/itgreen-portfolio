@@ -51,7 +51,9 @@
     animation-name: moveInLeft;
 
     & span {
-      color: $color-red;
+      position: relative;
+      display: inline-block;
+      color: $color-green;
       font-weight: 400;
     }
   }
@@ -85,18 +87,20 @@
 
     display: flex;
     align-items: center;
-    margin-top: 2.4rem;
-    padding: 0.8rem 3rem;
-    width: 27.5rem;
-    height: 4.8rem;
+    justify-content: center;
+    margin-top: 3.5rem;
+    padding: 0.8rem 2rem;
+    width: 35rem;
+    height: 5rem;
 
     background-color: rgba($color-background, 0.6);
-    border: 2px solid $color-red;
+    border: 2px solid $color-green;
     border-radius: 2px;
 
-    color: $color-red;
-    font-size: 2.4rem;
+    color: $color-green;
+    font-size: 2.2rem;
     font-weight: 500;
+    text-align: center;
 
     cursor: pointer;
     animation: moveInBottom 0.7s 1.2s;
@@ -127,11 +131,11 @@
 
       top: -2px;
       left: -2px;
-      width: 27.5rem;
-      height: 4.8rem;
+      width: 35rem;
+      height: 5rem;
 
       border-radius: 3px;
-      border: 2px solid rgba($color-red, 1);
+      border: 2px solid rgba($color-green, 1);
 
       filter: blur(0);
       transform-origin: 50%;
@@ -177,7 +181,7 @@
     // margin-bottom: -3px;
     transform: rotate(90deg);
 
-    fill: $color-red;
+    fill: $color-green;
 
     transition: all 0.3s;
 

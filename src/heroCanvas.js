@@ -1,14 +1,13 @@
 const canvasDots = function () {
-  const canvas = document.querySelector('canvas'),
+  const canvas = document.querySelector('.connecting-dots'),
     ctx = canvas.getContext('2d'),
     colorDot = [
-      'rgb(81, 162, 233)',
-      'rgb(81, 162, 233)',
-      'rgb(81, 162, 233)',
-      'rgb(81, 162, 233)',
-      'rgb(255, 77, 90)',
-    ], // 80% of dots are blue. 20% pink
-    color = 'rgb(81, 162, 233)';
+      'rgb(22, 163, 74)',
+      'rgb(22, 163, 74)',
+      'rgb(22, 163, 74)',
+      'rgb(16, 185, 129)',
+    ],
+    color = 'rgb(22, 163, 74)';
 
   // ctx.globalAlpha = 0.8;
   canvas.width = document.body.scrollWidth;
@@ -179,7 +178,7 @@ const canvasDots = function () {
                 distanceRatio = 0;
               }
 
-              ctx.strokeStyle = `rgb(81, 162, 233, ${1 - distanceRatio})`;
+              ctx.strokeStyle = `rgb(22, 163, 74, ${1 - distanceRatio})`;
 
               ctx.stroke();
               ctx.closePath();
