@@ -1,3 +1,5 @@
-# Portfolio site
+# Sitio de Portafolio
 
-https://www.benscott.dev/
+https://giancarlogs.github.io/itgreen-portfolio/
+
+
