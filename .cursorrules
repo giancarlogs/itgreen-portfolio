@@ -1,0 +1,106 @@
+# Portfolio Project - Cursor Rules
+
+## Project Context
+This is a Webpack-based portfolio website cloned from Ben Scott's design. The project uses:
+- **Webpack 5.99.9** for bundling and dev server
+- **SASS/SCSS** for styling (modern sass, not node-sass)
+- **Vanilla JavaScript** with Canvas animations
+- **PostCSS** for CSS processing
+- **File-loader** for asset management
+
+## Project Structure
+```
+portfolio-site/
+├── src/
+│   ├── index.js              # Main entry point - ALL CONTENT HERE
+│   ├── template.html         # HTML template
+│   ├── bgCanvas.js          # Background canvas animation
+│   ├── heroCanvas.js        # Hero section canvas animation
+│   ├── sass/                # All SCSS files
+│   │   ├── main.scss        # Main SCSS entry point
+│   │   ├── _base.scss       # Base styles & CSS variables
+│   │   ├── _hero.scss       # Hero section styles
+│   │   ├── _about.scss      # About section styles
+│   │   ├── _projects.scss   # Projects section styles
+│   │   ├── _contact.scss    # Contact form styles
+│   │   ├── _nav.scss        # Navigation styles
+│   │   ├── _main-bg.scss    # Background styles
+│   │   └── _animations.scss # Animation definitions
+│   └── assets/              # Images and static files
+├── webpack.config.js        # Webpack configuration
+├── package.json            # Dependencies
+└── .cursorrules            # This file
+```
+
+## Key Information for AI
+1. **Main Content File**: `src/index.js` contains ALL the website content:
+   - Personal information (name, title, description)
+   - Projects array with all project data
+   - About section content
+   - Contact information
+
+2. **Styling Architecture**:
+   - Uses SCSS with partials (files starting with _)
+   - CSS custom properties defined in `_base.scss`
+   - Mobile-first responsive design
+   - BEM methodology for class naming
+
+3. **Canvas Animations**:
+   - `bgCanvas.js` - Animated background particles
+   - `heroCanvas.js` - Hero section animation effects
+   - Both use vanilla JavaScript and HTML5 Canvas
+
+## Common Modification Tasks
+
+### Changing Personal Information
+- **File**: `src/index.js`
+- **What to modify**: Hero section object, about section content
+- **Example**: Change name, title, description, social links
+
+### Adding/Modifying Projects
+- **File**: `src/index.js` 
+- **Location**: Look for projects array
+- **Structure**: Each project needs: title, description, tech stack, images, links
+- **Images**: Place in `src/assets/` and reference correctly
+
+### Color Scheme Changes
+- **Primary file**: `src/sass/_base.scss` (CSS custom properties)
+- **Background**: `src/sass/_main-bg.scss`
+- **Individual sections**: Respective SCSS partials
+
+### Background Modifications
+- **Colors/Gradients**: `src/sass/_main-bg.scss`
+- **Canvas effects**: `src/bgCanvas.js` and `src/heroCanvas.js`
+
+## Development Commands
+- **Start dev server**: `yarn start` or `npm start`
+- **Build for production**: `yarn build` or `npm build`
+- **Dev server runs on**: `http://localhost:8080`
+
+## Important Notes
+1. **No React/Vue/Angular** - This is vanilla JavaScript
+2. **SCSS compilation** handled by Webpack + sass-loader
+3. **Hot reload** works for both JS and SCSS changes
+4. **Asset handling** via file-loader (images get hashed names)
+5. **Modern CSS** features supported via PostCSS
+
+## Styling Guidelines
+- Use existing SCSS structure (don't create new main files)
+- Follow BEM naming: `.block__element--modifier`
+- Maintain mobile-first responsive approach
+- Keep canvas animations performant
+- Use CSS custom properties for consistent theming
+
+## Troubleshooting
+- If build fails: Check SCSS syntax in modified files
+- If images don't load: Verify paths in `src/assets/`
+- If styles don't apply: Check import order in `main.scss`
+- If canvas breaks: Verify JavaScript syntax in canvas files
+
+## AI Instructions
+When helping with this project:
+1. **Content changes**: Always modify `src/index.js`
+2. **Style changes**: Use appropriate SCSS partial files
+3. **Keep animations**: Don't break existing canvas functionality
+4. **Maintain structure**: Follow existing patterns and conventions
+5. **Test locally**: Remind user to check `http://localhost:8080` after changes
